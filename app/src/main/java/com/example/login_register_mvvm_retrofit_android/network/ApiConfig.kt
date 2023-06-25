@@ -26,11 +26,14 @@ class ApiConfig {
             .create()
 
         private val retrofit: Retrofit = Retrofit.Builder()
-            .baseUrl("https://cosmetic-b.herokuapp.com")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(client)
             .build()
 
+        fun getApiService(): ApiService{
+            return retrofit.create(ApiService::class.java)
+        }
 
     }
 }
