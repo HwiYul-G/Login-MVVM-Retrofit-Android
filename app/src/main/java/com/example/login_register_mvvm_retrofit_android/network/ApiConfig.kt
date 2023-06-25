@@ -31,8 +31,8 @@ class ApiConfig {
             .client(client)
             .build()
 
-        fun getApiService(): ApiService{
-            return retrofit.create(ApiService::class.java)
+        fun getApiService(): ApiServices{
+            return retrofit.create(ApiServices::class.java)
         }
 
     }
