@@ -12,6 +12,8 @@ import com.example.login_register_mvvm_retrofit_android.viewmodel.ViewModelFacto
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     // loginViewModel이 MainActivity의 VM임
+    // private lateinit var viewModel : LoginViewModel 이후 viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)로 초기화
+    // 하지 않고 by를 통해 지연생성할 수 있다. (jvmTarget 1.8이상부터 가능한 것 같다?)
     private val loginViewModel : LoginViewModel by viewModels{
         ViewModelFactory.getInstance(this)
     }
