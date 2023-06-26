@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig {
     companion object{
-        const val BASE_URL = "http://"
+        const val BASE_URL = "https://cosmetic-b.herokuapp.com"
 
         private val loggingInterceptor = if(BuildConfig.DEBUG){
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
